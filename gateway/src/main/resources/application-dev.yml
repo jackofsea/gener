@@ -1,0 +1,41 @@
+
+server:
+  port: 9001 #指定运行端口
+  #开启https支持
+#  ssl:
+#    enabled: true
+#    key-alias: scg
+#    key-store-password: scg1234
+#    key-store: classpath:scg-keystore.p12
+#    key-store-type: PKCS12
+
+
+spring:
+  application:
+    name: gener-gateway #指定服务名称
+  cloud:
+    gateway:
+#      httpclient:
+#        ssl:
+#          useInsecureTrustManager: false #开启https支持
+      routes:
+        - id: after_route
+            uri: https://example.org
+            predicates:
+              - Cookie=mycookie,mycookievalue
+
+
+
+
+
+eureka:
+  instance:
+    hostname: localhost #指定主机地址
+    prefer-ip-address: true
+  client:
+    fetch-registry: true #指定是否要从注册中心获取服务（注册中心不需要开启）
+    register-with-eureka: true #指定是否要注册到注册中心（注册中心不需要开启）
+    service-url:
+     defaultZone: http://localhost:8001/eureka/
+
+

@@ -1,4 +1,4 @@
-package com.huanhai.utils;
+package com.huanhai.utils.response;
 /**
  * 响应的接口
  *

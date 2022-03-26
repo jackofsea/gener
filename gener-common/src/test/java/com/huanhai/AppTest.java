@@ -1,6 +1,6 @@
 package com.huanhai;
 
-import com.huanhai.utils.GSonUtils;
+import com.huanhai.utils.json.GsonUtil;
 import org.junit.Test;
 
 import static org.junit.Assert.assertTrue;
@@ -19,11 +19,12 @@ public class AppTest
            User user=new User();
            user.setName("张三");
            user.setAge(18);
-        System.out.println(GSonUtils.serialise(user));
+        System.out.println(GsonUtil.serialise(user));
         assertTrue( true );
         String json="{\"name\":\"张三\",\"age\":18}";
-        User u=GSonUtils.deSerialise(json,User.class);
+        User u= GsonUtil.deSerialise(json,User.class);
         System.out.println(u.age);
+
 
     }
 

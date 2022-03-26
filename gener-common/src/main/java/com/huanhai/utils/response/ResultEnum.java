@@ -1,11 +1,12 @@
-package com.huanhai.utils;
+package com.huanhai.utils.response;
 
 /**
+ *
  * @author luofeng
  * @version 1.0
  * @date 2021-03-17 14:58
  **/
-public enum  ResultEnum implements IResult  {
+public enum  ResultEnum implements IResult {
 
     /**
      * 成功
@@ -50,10 +51,12 @@ public enum  ResultEnum implements IResult  {
         return ResultEnum.UNKNOWN;
     }
 
+    @Override
     public String getMsg() {
         return msg;
     }
 
+    @Override
     public String getCode() {
         return code;
     }

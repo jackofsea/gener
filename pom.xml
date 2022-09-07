@@ -19,10 +19,12 @@
         <module>gateway</module>
         <module>gener-common</module>
         <module>redis</module>
+        <module>gener-webservice</module>
     </modules>
     <properties>
         <java.version>1.8</java.version>
         <spring-cloud.version>Greenwich.SR3</spring-cloud.version>
+        <webservice.version>3.2.4</webservice.version>
     </properties>
     <dependencies>
         <dependency>
